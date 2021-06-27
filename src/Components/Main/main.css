@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #222831;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftbar-container {
+  margin-left: 30px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100px;
+  border: 1px solid #eeee;
+  text-align: left;
+  position: relative;
+  bottom: 60%;
+}
+
+.pixel-container {
+  margin-left: 30px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 60%;
+  height: 700px;
+}
+
+.per-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
