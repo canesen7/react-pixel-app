@@ -23,12 +23,16 @@ const PixelContainer = (props) => {
             backgroundColor={backgroundColor} 
             color={color}
             mouseDown={props.mouseDown}
-            setMouseDown={props.setMouseDown} 
+            setMouseDown={props.setMouseDown}
+            addedColors={props.addedColors}
+            setAddedColors={props.setAddedColors}
+            allUsedColors={props.allUsedColors}
+            setAllUsedColors={props.setAllUsedColors} 
         />)
     }
 
     return (
-        <div className={"pixel-container"} style={{ width: props.divWidth, height: props.divHeight }}>
+        <div className={"pixel-container"} style={{ width: props.divWidth, height: props.divHeight, borderWidth: "1px 0 0 0" }}>
             {row}
         </div>
     )
