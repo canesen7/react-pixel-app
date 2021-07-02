@@ -24,6 +24,10 @@ const Row = (props) => {
                 height={props.height}
                 backgroundColor={backgroundColor}
                 color={color} 
+                addedColors={props.addedColors}
+                setAddedColors={props.setAddedColors} 
+                allUsedColors={props.allUsedColors}
+                setAllUsedColors={props.setAllUsedColors}
             />)
     }
 

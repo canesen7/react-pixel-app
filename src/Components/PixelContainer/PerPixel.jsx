@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const PerPixel = (props) => {
 
@@ -13,13 +13,21 @@ const PerPixel = (props) => {
   const pixelStyle = {
     backgroundColor: isPixelChanged === true ? pixelColor : backgroundColor,
     border: props.showGrid === true ? `1px solid ${props.gridColor}` : "none",
-    borderWidth: props.showGrid === true ? "0 1px 1px 0" : "none",
+    borderWidth: props.showGrid === true ? props.x === 0 ? "0 1px 1px 1px" : "0 1px 1px 0" : "none",
     cursor: "pointer",
     width: props.grid,
     height: props.grid,
     display: "block",
     cursor: "cell",
     boxSizing: "inherit"
+  }
+ 
+  const checkColorAddedBefore = (color) => {
+    const newColorList = new Set(props.addedColors);
+
+    if(newColorList.has(color) != true && props.addedColors.length < 7) {
+      props.setAddedColors([...props.addedColors, color])
+    }
   }
 
   const leftClickApplyColor = () => {
@@ -60,6 +68,7 @@ const PerPixel = (props) => {
   const onMouseDown = () => {
     props.setMouseDown(true)
     leftClickApplyColor()
+    checkColorAddedBefore(color)
   }
 
   const onMouseUp = () => {
@@ -68,7 +77,6 @@ const PerPixel = (props) => {
   }
 
   const drawLine = (e) => {
-    console.log(e)
     if(props.mouseDown === true && e.buttons === 1) {
       leftClickApplyColor()
     } else if(props.mouseDown === true && e.buttons === 2) {
@@ -77,7 +85,7 @@ const PerPixel = (props) => {
   }
 
   return (
-    <a
+    <div
       style={pixelStyle}
       className={`column-${props.x + 1} column`}
       onClick={applyColor}
@@ -87,7 +95,7 @@ const PerPixel = (props) => {
       onMouseDown={onMouseDown}
       onMouseOver={drawLine}
       onMouseUp={onMouseUp}>
-    </a>
+    </div>
   )
 }
 
