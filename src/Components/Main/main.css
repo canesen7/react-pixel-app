@@ -18,7 +18,7 @@ body {
 }
 
 .colors {
-  display: flex
+  display: flex;
 }
 
 .added-colors {
@@ -28,12 +28,12 @@ body {
 
 .color {
   box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    margin-right: 10px;
-    flex-direction: row;
-    border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  margin-right: 10px;
+  flex-direction: row;
+  border-radius: 100px;
 }
 
 .color-picker {
@@ -48,6 +48,7 @@ body {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  background: #222831;
 }
 
 .conf-container {
@@ -64,6 +65,7 @@ body {
   left: 0px;
   bottom: 0px;
   margin-bottom: auto;
+  background: #222831;
 }
 
 .pixel-container {
@@ -85,4 +87,50 @@ body {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.open-close-button {
+  display: flex;
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 0px;
+  bottom: 82px;
+  margin-bottom: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: -1;
+}
+
+.open-close-button-inside {
+  box-sizing: border-box;
+  height: 42px;
+  border: 1px solid white;
+  width: 34px;
+  margin-left: 2px;
+  background: #222831;
+  transform: rotate(136deg);
+}
+
+.open-configuration-container {
+  animation-name: open-conf;
+  animation-duration: .5s;
+}
+
+@keyframes open-conf {
+  from {bottom: -99px;} to {bottom: 0px;}
+}
+
+@keyframes close-conf {
+  from {bottom: 0px;} to {bottom: -99px;}
+}
+
+.close-configuration-container {
+  animation-name: close-conf;
+  animation-duration: .5s;
 }

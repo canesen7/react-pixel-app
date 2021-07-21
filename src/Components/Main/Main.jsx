@@ -1,19 +1,20 @@
-import LeftBar from "../LeftBar/LeftBar"
+import ConfBar from "../LeftBar/ConfBar"
 import PixelContainer from "../PixelContainer/PixelContainer";
 import { useState, useEffect } from "react";
 import "./main.css"
 import $ from "jquery"
 
 const App = () => {
-  const [grid, setGrid] = useState(20)
+  const [grid, setGrid] = useState(40)
   const [showGrid, setShowGrid] = useState(true)
-  const [width, setWidth] = useState(25)
-  const [height, setHeight] = useState(25)
+  const [width, setWidth] = useState(16)
+  const [height, setHeight] = useState(16)
   const [divWidth, setDivWith] = useState(width * grid)
   const [divHeight, setDivHeight] = useState(height * grid)
   const [backgroundColor, setBackgroundColor] = useState("black")
   const [color, setColor] = useState("#ffff")
   const [gridColor, setGridColor] = useState("#585858")
+  const [openConfiguration, setOpenConfiguration] = useState(true)
   const [addedColors, setAddedColors] = useState([])
   const [allUsedColors, setAllUsedColors] = useState([])
 
@@ -44,7 +45,7 @@ const App = () => {
         setAddedColors={setAddedColors}
         allUsedColors={allUsedColors}
         setAllUsedColors={setAllUsedColors}/>
-      <LeftBar 
+      <ConfBar 
         addedColors={addedColors}
         backgroundColor={backgroundColor}
         setBackgroundColor={setBackgroundColor}
@@ -53,7 +54,9 @@ const App = () => {
         gridColor={gridColor}
         setGridColor={setGridColor}
         showGrid={showGrid}
-        setShowGrid={setShowGrid}/>
+        setShowGrid={setShowGrid}
+        openConfiguration={openConfiguration}
+        setOpenConfiguration={setOpenConfiguration}/>
     </div>
   );
 }
