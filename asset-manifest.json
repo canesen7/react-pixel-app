@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-pixel-app/static/css/main.139d0776.chunk.css",
-    "main.js": "/react-pixel-app/static/js/main.9cc91a2b.chunk.js",
-    "main.js.map": "/react-pixel-app/static/js/main.9cc91a2b.chunk.js.map",
+    "main.css": "/react-pixel-app/static/css/main.ae87a3d0.chunk.css",
+    "main.js": "/react-pixel-app/static/js/main.581c9766.chunk.js",
+    "main.js.map": "/react-pixel-app/static/js/main.581c9766.chunk.js.map",
     "runtime-main.js": "/react-pixel-app/static/js/runtime-main.0c20e20f.js",
     "runtime-main.js.map": "/react-pixel-app/static/js/runtime-main.0c20e20f.js.map",
-    "static/js/2.c20d41f3.chunk.js": "/react-pixel-app/static/js/2.c20d41f3.chunk.js",
-    "static/js/2.c20d41f3.chunk.js.map": "/react-pixel-app/static/js/2.c20d41f3.chunk.js.map",
+    "static/js/2.30b3e466.chunk.js": "/react-pixel-app/static/js/2.30b3e466.chunk.js",
+    "static/js/2.30b3e466.chunk.js.map": "/react-pixel-app/static/js/2.30b3e466.chunk.js.map",
     "index.html": "/react-pixel-app/index.html",
-    "static/css/main.139d0776.chunk.css.map": "/react-pixel-app/static/css/main.139d0776.chunk.css.map",
-    "static/js/2.c20d41f3.chunk.js.LICENSE.txt": "/react-pixel-app/static/js/2.c20d41f3.chunk.js.LICENSE.txt"
+    "static/css/main.ae87a3d0.chunk.css.map": "/react-pixel-app/static/css/main.ae87a3d0.chunk.css.map",
+    "static/js/2.30b3e466.chunk.js.LICENSE.txt": "/react-pixel-app/static/js/2.30b3e466.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0c20e20f.js",
-    "static/js/2.c20d41f3.chunk.js",
-    "static/css/main.139d0776.chunk.css",
-    "static/js/main.9cc91a2b.chunk.js"
+    "static/js/2.30b3e466.chunk.js",
+    "static/css/main.ae87a3d0.chunk.css",
+    "static/js/main.581c9766.chunk.js"
   ]
 }
