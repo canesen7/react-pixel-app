@@ -1,4 +1,4 @@
-import ConfBar from "../LeftBar/ConfBar"
+import ConfBar from "../ConfigContainer/ConfBar"
 import PixelContainer from "../PixelContainer/PixelContainer";
 import { useState, useEffect } from "react";
 import "./main.css"
