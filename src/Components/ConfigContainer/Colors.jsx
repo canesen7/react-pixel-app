@@ -2,7 +2,7 @@ import { useState } from "react"
 import MainColors from "./MainColors"
 import AddedColors from "./AddedColors"
 
-const ConfBar = (props) => {
+const Colors = (props) => {
     const [showBGPicker, setShowBGPicker] = useState(false)
     const setShowBGPickerDisplay = showBGPicker ? "" : "none"
     const [showColorPicker, setShowColorPicker] = useState(false)
@@ -18,10 +18,6 @@ const ConfBar = (props) => {
         } else {
             props.setGridColor(color)
         }
-    }
-
-    const changeConfiguration = () => {
-        props.setOpenConfiguration(!props.openConfiguration)
     }
 
     const publicShowColor = pluginName => {
@@ -61,20 +57,16 @@ const ConfBar = (props) => {
         displayControl: setShowGridPickerDisplay,
         color: props.gridColor
     },
-
     ]
 
-    return (
-        <div className={props.openConfiguration === true ? "conf-container open-configuration-container" : "conf-container close-configuration-container"} style={{bottom: props.openConfiguration === true ? "0px" : "-99px"}}>
-            <div className={"open-close-button"}>
-                <div className={"open-close-button-inside"} onClick={changeConfiguration}></div>
-            </div>
+    return(
+        <div>
             <div className="color-container">
-                <MainColors pickerList={pickerList} publicShowColor={publicShowColor} publicChangeColor={publicChangeColor} />
-                <AddedColors addedColors={props.addedColors} setColor={props.setColor} />
-            </div>
+                    <MainColors pickerList={pickerList} publicShowColor={publicShowColor} publicChangeColor={publicChangeColor} />
+                    <AddedColors addedColors={props.addedColors} setColor={props.setColor} />
+                </div>
         </div>
     )
 }
 
-export default ConfBar
+export default Colors
