@@ -17,6 +17,7 @@ const App = () => {
   const [openConfiguration, setOpenConfiguration] = useState(true)
   const [addedColors, setAddedColors] = useState([])
   const [allUsedColors, setAllUsedColors] = useState([])
+  const [showBackgroundColor, setShowBackgroundColor] = useState(false)
 
   const [mouseDown, setMouseDown] = useState(false)
 
@@ -44,7 +45,9 @@ const App = () => {
         addedColors={addedColors}
         setAddedColors={setAddedColors}
         allUsedColors={allUsedColors}
-        setAllUsedColors={setAllUsedColors}/>
+        setAllUsedColors={setAllUsedColors}
+        showBackgroundColor={showBackgroundColor}
+        setShowBackgroundColor={setShowBackgroundColor}/>
       <ConfBar 
         addedColors={addedColors}
         backgroundColor={backgroundColor}
@@ -56,7 +59,13 @@ const App = () => {
         showGrid={showGrid}
         setShowGrid={setShowGrid}
         openConfiguration={openConfiguration}
-        setOpenConfiguration={setOpenConfiguration}/>
+        setOpenConfiguration={setOpenConfiguration}
+        width={width}
+        setWidth={setWidth}
+        height={height}
+        setHeight={setHeight}
+        grid={grid}
+        setGrid={setGrid}/>
     </div>
   );
 }

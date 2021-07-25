@@ -28,6 +28,8 @@ const Row = (props) => {
                 setAddedColors={props.setAddedColors} 
                 allUsedColors={props.allUsedColors}
                 setAllUsedColors={props.setAllUsedColors}
+                showBackgroundColor={props.showBackgroundColor}
+                setShowBackgroundColor={props.setShowBackgroundColor} 
             />)
     }
 
