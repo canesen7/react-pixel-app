@@ -27,7 +27,9 @@ const PixelContainer = (props) => {
             addedColors={props.addedColors}
             setAddedColors={props.setAddedColors}
             allUsedColors={props.allUsedColors}
-            setAllUsedColors={props.setAllUsedColors} 
+            setAllUsedColors={props.setAllUsedColors}
+            showBackgroundColor={props.showBackgroundColor}
+            setShowBackgroundColor={props.setShowBackgroundColor} 
         />)
     }
 
