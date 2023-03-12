@@ -1,4 +1,4 @@
-*Hi. *
+Hi.
 
 This project is a pixel-art drawing project that I created using React. 
 I wanted to test the power of React in this project. I used React Hooks and a little bit of jQuery in the project. 
